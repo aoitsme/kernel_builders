@@ -1,4 +1,4 @@
-name: AURORA KDDI XXKSU
+name: AKARI KDDI XXKSU
 
 on:
   workflow_dispatch:
