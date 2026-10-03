@@ -23,7 +23,7 @@ jobs:
     env:
       BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
       CHAT_ID: ${{ secrets.CHAT_ID }}
-      KERNEL_VER: Stardust-v3.1
+      KERNEL_VER: Stardust-v3.2
       KERNEL_URL: https://github.com/aoi-itsme/android_kernel_sony_sdm845
       KERNEL_BRANCH: test1
       CLANG_URL: https://gitlab.com/kei-space/clang/r498229b.git
