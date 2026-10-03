@@ -27,7 +27,7 @@ jobs:
       KERNEL_VER: Stardust-v3.2
       KERNEL_URL: https://github.com/aoi-itsme/android_kernel_sony_sdm845
       KERNEL_BRANCH: stardust
-      CLANG_URL: https://gitlab.com/kei-space/clang/r498229b.git
+      CLANG_URL: https://gitlab.com/kei-space/clang/r547379.git
       CLANG_BRANCH: master
       KSU_URL: https://raw.githubusercontent.com/backslashxx/KernelSU/master/kernel/setup.sh
       KSU_BRANCH: master
