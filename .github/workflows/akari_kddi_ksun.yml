@@ -11,7 +11,7 @@ jobs:
       CODENAME: akari_kddi
       BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
       CHAT_ID: ${{ secrets.CHAT_ID }}
-      KERNEL_VER: Stargate-v1.3
+      KERNEL_VER: Stargate-v1.2
       KERNEL_BRANCH: stargate
       KERNEL_URL: https://github.com/aoi-itsme/android_kernel_sony_sdm845
       ANYKERNEL_URL: https://github.com/Sorayukii/AnyKernel3
