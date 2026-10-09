@@ -1,4 +1,4 @@
-name: AKARI KDDI XXKSU
+name: AKARI KDDI KSUN
 
 on:
   workflow_dispatch:
@@ -121,7 +121,7 @@ jobs:
         KERNEL_IMAGE=$KERNEL_IMAGE_DIR/Image.gz-dtb
         CONFIG_NAME="tama_${CODENAME}_defconfig"
         KERNEL_COMMIT_ID=$(git rev-parse --short=7 HEAD)
-        ZIP_NAME="${KERNEL_VER}_${CODENAME}-KSU-$(date +%Y%m%d)-${KERNEL_COMMIT_ID}.zip"
+        ZIP_NAME="${KERNEL_VER}_${CODENAME}-KSUN-$(date +%Y%m%d)-${KERNEL_COMMIT_ID}.zip"
         echo "ZIP_NAME=$ZIP_NAME" >> $GITHUB_ENV
         echo "LOG_FILE=$LOG_FILE" >> $GITHUB_ENV
 
