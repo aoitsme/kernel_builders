@@ -62,7 +62,7 @@ jobs:
       run: |
         cd $KERNEL_DIR
         curl -LSs "$KSU_URL" | bash -s $KSU_BRANCH
-        sed -i 's/-DKSU_VERSION=[0-9]\+/-DKSU_VERSION=32712/g' KernelSU/kernel/Makefile
+        #sed -i 's/-DKSU_VERSION=[0-9]\+/-DKSU_VERSION=32712/g' KernelSU/kernel/Makefile
     
     - name: Generate defconfig
       run: |
@@ -77,7 +77,8 @@ jobs:
         echo "CONFIG_KSU_HACK_ARM64_BRANCH_LINK=y" >> "${DEFCONFIG_PATH}"
         echo "CONFIG_KSU_LSM_SECURITY_HOOKS=y" >> "${DEFCONFIG_PATH}"
         echo "CONFIG_KSU_HOSTSREDIRECT=y" >> "${DEFCONFIG_PATH}"
-        echo "KSU_NOPRINTK=y" >> "${DEFCONFIG_PATH}"
+        echo "CONFIG_KSU_NOPRINTK=y" >> "${DEFCONFIG_PATH}"
+        echo "CONFIG_KSU_SUSFS=y" >> "${DEFCONFIG_PATH}"
         sed -i "s/CONFIG_LOCALVERSION=\"-perf\"/CONFIG_LOCALVERSION=\"-$KERNEL_VER\"/" "$DEFCONFIG_PATH"
         sed -i "s/^CONFIG_AUDIT=.*/CONFIG_AUDIT=n/" "$DEFCONFIG_PATH"
         make O=out ARCH=arm64 "$CONFIG_NAME"
